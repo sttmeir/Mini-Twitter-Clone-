@@ -1,15 +1,16 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb # jdbc:h2:file:~/testdb - this way it will store on disk
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:postgresql://localhost:5433/nottify
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: ideappad147
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 jwt:
   secret: asncnJNAJKbjkd518d48eSafsef5851dfrg473mslasdef785146efdg
@@ -17,11 +18,10 @@ jwt:
 server:
   port: 8080
 
-h2:
-  console:
-    enabled: true
-    path: /h2-console
-
 logging:
   level:
     org.springframework.security: DEBUG
+
+postgresql:
+  init-mode: always
+
