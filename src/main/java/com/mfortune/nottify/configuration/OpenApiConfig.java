@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.security.SecuritySchemes;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@OpenAPIDefinition(info = @Info(title = "Instagram", version = "1.0",
+@OpenAPIDefinition(info = @Info(title = "Nottify", version = "1.0",
         description = "Simple Twitter clone API with JWT"),
         security = {@SecurityRequirement(name = "bearerToken")}
 )

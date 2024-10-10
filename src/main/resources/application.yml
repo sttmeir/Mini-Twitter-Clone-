@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/nottify
+    url: jdbc:postgresql://db:5432/nottify
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: ideappad147
